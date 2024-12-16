@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     music.src = './music/SuperMarioThemeSong.mp3'
 
     music.load()
-    music.play(
+    music.play()
 
     mute_music.addEventListener('click', () => {
         if (music.muted) {
