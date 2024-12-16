@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const score = document.querySelector('.score');
     music.volume = 0.5;
 
+    music.src = './music/SuperMarioThemeSong.mp3'
+
+    music.load()
+    music.play(
+
     mute_music.addEventListener('click', () => {
         if (music.muted) {
             music.muted = false;
