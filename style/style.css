@@ -64,6 +64,9 @@
         width: 100%;
         height: 90vh;
     }
+    .jump {
+        animation: jump 500ms ease-out;
+    }
 }
 
 @keyframes pipe-animation {
@@ -80,7 +83,9 @@
     0% {
         bottom: 0;
     }
-
+    30%{
+        bottom: 180px;
+    }
     40% {
         bottom: 180px;
     }
@@ -90,6 +95,12 @@
     }
 
     60% {
+        bottom: 180px;
+    }
+    70%{
+        bottom: 180px;
+    }
+    80%{
         bottom: 180px;
     }
 
