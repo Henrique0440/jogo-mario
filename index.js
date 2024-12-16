@@ -6,12 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const music = document.querySelector('.music');
     const mute_music = document.querySelector('.mute-desmute')
     const score = document.querySelector('.score');
+    const reiniciar = document.querySelector('.reiniciar')
     music.volume = 0.5;
-
-    music.src = './music/SuperMarioThemeSong.mp3'
-
-    music.load()
-    music.play()
 
     mute_music.addEventListener('click', () => {
         if (music.muted) {
@@ -24,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
             mute_music.src = './imagens/mute.png'
         }
     })
+
+    const reload = () => {
+        location.reload()
+    };
+
+    reiniciar.addEventListener('click', reload);
 
     const jumpMario = () => {
         mario.classList.add('jump');
@@ -61,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             clouds.style.animation = 'none'
             clouds.style.left = `${cloudsPosition}px`
+
+            reiniciar.style.display = 'block'
 
             music.pause()
 
