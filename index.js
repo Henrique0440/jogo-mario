@@ -20,13 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    document.addEventListener('keydown', () => {
-        mario.classList.add('jump')
-
+    const jumpMario = () => {
+        mario.classList.add('jump');
         setTimeout(() => {
-            mario.classList.remove('jump')
+            mario.classList.remove('jump');
         }, 500);
-    })
+    };
+
+    // Detecção de pressionamento de tecla
+    document.addEventListener('keydown', jumpMario);
+
+    // Detecção de toque na tela (para dispositivos móveis)
+    document.addEventListener('touchstart', jumpMario);
 
     let i = 0
     const loopscore = setInterval(() => {
